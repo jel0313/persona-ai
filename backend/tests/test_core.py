@@ -11,9 +11,9 @@ from app.rag import RagStore, chunk_text
 
 
 class PersonaTest(unittest.TestCase):
-    def test_ten_personas(self):
+    def test_eleven_personas(self):
         personas = load_personas()
-        self.assertEqual(len(personas), 10)
+        self.assertEqual(len(personas), 11)
         for p in personas.values():
             self.assertTrue(p.system_prompt)
             self.assertNotIn("system_prompt", p.public())
